@@ -20,7 +20,7 @@
     },
     {
       "id": 4,
-      "body": "ngl, this looks like a lot 😬",
+      "body": "ngl, this looks like a lotdddd 😬",
       "username": "Duane",
       "created_at": "2021-01-07T09:20:10"
     },
@@ -29,6 +29,16 @@
       "body": "You got this! 💪",
       "username": "Liza",
       "created_at": "2021-01-07T09:21:11"
+    },
+    {
+      "username": "Duane",
+      "body": "sdf",
+      "id": 6
+    },
+    {
+      "username": "Duane",
+      "body": "ddd",
+      "id": 7
     }
   ]
 }

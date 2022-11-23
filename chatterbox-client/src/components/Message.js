@@ -4,9 +4,10 @@ import EditMessage from "./EditMessage";
 function Message({ message, currentUser, onMessageDelete, onUpdateMessage }) {
   const [isEditing, setIsEditing] = useState(false);
 
-  const { id, username, body, created_at: createdAt } = message;
+  const { id, username, body, created_at: createdAt, updated_at: updatedAt} = message;
 
   const timestamp = new Date(createdAt).toLocaleTimeString();
+  const timestampUpdated = new Date(updatedAt).toLocaleTimeString();
 
   const isCurrentUser = currentUser.username === username;
 
@@ -36,6 +37,8 @@ function Message({ message, currentUser, onMessageDelete, onUpdateMessage }) {
       ) : (
         <p>{body}</p>
       )}
+      {timestamp === timestampUpdated ? null : <span className="time" style={{opacity:0.5, fontStyle:"oblique"}}>Edited:{timestampUpdated}</span>}
+
       {isCurrentUser ? (
         <div className="actions">
           <button onClick={() => setIsEditing((isEditing) => !isEditing)}>
